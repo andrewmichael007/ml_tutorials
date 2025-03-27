@@ -5,8 +5,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Fake data for now
-shoe_sizes = np.array([7, 8, 9, 10, 11]) #input 
-heights = np.array([160, 165, 170, 175, 180])
+shoe_sizes = np.array([7, 8, 9, 10, 11]) #input feature x
+heights = np.array([160, 165, 170, 175, 180]) # input feature y
 
 # y_hat is the predictions
 
@@ -36,7 +36,7 @@ print("SQUARED ERROR: ",  squared_error, "\n")
 # MEAN SQUARED ERROR FUNCTION / COST FUNCTION
 # calculating the difference between the actual and predicted values to know how wrong we are.
 
-m = len(heights)
+m = len(heights) #number of training set
 cost_function =  (1 / (2 * m )) * (errors ** 2)
 print("COST FUNCTION: " , cost_function)
 
