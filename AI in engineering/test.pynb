@@ -1,0 +1,48 @@
+# Step 1: Import necessary libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import statsmodels.api as sm
+from sklearn.model_selection import train_test_split
+
+Read the CSV and display first 3 rows
+df = pd.read_csv('Clothing.csv')
+print("First 3 rows of the dataframe:")
+print(df.head(3))
+
+# Step 3: Extract specific columns into a new dataframe
+cols_to_extract = ['tsales', 'margin', 'nown', 'inv1', 'inv2', 'ssize', 'start']
+df_extracted = df[cols_to_extract]
+print("\nFirst 2 rows of the extracted dataframe:")
+print(df_extracted.head(2))
+
+ Display summary statistics
+print("\nSummary statistics of the new dataframe:")
+print(df_extracted.describe())
+
+
+
+# Step 6: Create Y variable (dependent variable)
+Y = df_extracted['tsales']
+
+# Step 7: Create X variable (independent variables)
+X = df_extracted.drop('tsales', axis=1)
+
+# Step 8: Add constant to X variables
+X = sm.add_constant(X)
+
+# Step 9: Split dataset into training and testing sets (70% train, 30% test)
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.3, random_state=42)
+
+# Step 10: Train a multilinear regression model using OLS
+model = sm.OLS(Y_train, X_train).fit()
+
+# Display the model summary
+print("\nModel Summary:")
+print(model.summary())
+
+# Step 11: Predict Y values using test X
+Y_pred = model.predict(X_test)
+print("\nPredicted Y values (tsales) from test set:")
+print(Y_pred)

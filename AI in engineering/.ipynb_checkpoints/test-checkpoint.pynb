@@ -1,0 +1,26 @@
+# Step 1: Import necessary libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import statsmodels.api as sm
+from sklearn.model_selection import train_test_split
+
+Read the CSV and display first 3 rows
+df = pd.read_csv('Clothing.csv')
+print("First 3 rows of the dataframe:")
+print(df.head(3))
+
+# Step 3: Extract specific columns into a new dataframe
+cols_to_extract = ['tsales', 'margin', 'nown', 'inv1', 'inv2', 'ssize', 'start']
+df_extracted = df[cols_to_extract]
+print("\nFirst 2 rows of the extracted dataframe:")
+print(df_extracted.head(2))
+
+ Display summary statistics
+print("\nSummary statistics of the new dataframe:")
+print(df_extracted.describe())
+
+
+
+
