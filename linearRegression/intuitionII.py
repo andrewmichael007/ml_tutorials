@@ -54,7 +54,7 @@ for each in range(number_of_iterations):
 
     # print cost every 100 iterations
     if each % 100 == 0:
-        print(f"Iteration {each}: Cost = {cost_function}, w = {w:.4f}, b = {b:.4f}")
+        print( f"Iteration {each}: Cost = {cost_function}, w = {w:.4f}, b = {b:.4f}" )
 
 
 # Final values of w and b after training
