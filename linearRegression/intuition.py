@@ -1,4 +1,4 @@
-# Simple linear model to predict shoe sizes based on the height
+# Simple linear model to predict heights based on the shoe size
 
 # importing various libraries.
 import numpy as np
@@ -40,7 +40,7 @@ m = len(heights) #number of training set
 cost_function =  (1 / (2 * m )) * (errors ** 2)
 print("COST FUNCTION: " , cost_function)
 
-#PLOT
+#plot
 plt.scatter(shoe_sizes, heights, color = "blue", label = "actual height ")
 plt.plot(shoe_sizes , y_hat , color = "red" , label = "prediction height ")
 plt.xlabel("Shoe Size")
