@@ -36,15 +36,24 @@ print("SQUARED ERROR: ",  squared_error, "\n")
 # MEAN SQUARED ERROR FUNCTION / COST FUNCTION
 # calculating the difference between the actual and predicted values to know how wrong we are.
 
-m = len(heights) #number of training set
+m = len(heights) # number of training set
 cost_function =  (1 / (2 * m )) * (errors ** 2)
 print("COST FUNCTION: " , cost_function)
 
 #plot
-plt.scatter(shoe_sizes, heights, color = "blue", label = "actual height ")
-plt.plot(shoe_sizes , y_hat , color = "red" , label = "prediction height ")
+plt.scatter(shoe_sizes, heights, color = "blue", label = "actual height ") #this is the actual height
+plt.plot(shoe_sizes , y_hat , color = "red" , label = "prediction height ") #this is the predicted height
 plt.xlabel("Shoe Size")
 plt.ylabel("Height (cm)")
 plt.legend()
 plt.show()
 
+
+
+def predict_height(shoe_size, w, b):
+    return w * shoe_size + b
+
+# Example usage
+shoe_size = 12
+predicted_height = predict_height(shoe_size, w, b)
+print(f"The predicted height for a shoe size of {shoe_size} is {predicted_height:.2f} cm")
