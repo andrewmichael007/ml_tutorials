@@ -108,3 +108,20 @@ plt.ylabel("Cost (MSE)")
 plt.grid(True)
 plt.show()
 
+
+# Using an example from the dataset
+index = 100
+sample = features.iloc[index]  # Original (unscaled) input
+actual_price = y[index] * 100000  # Convert from $100k to full value
+
+# Normalize sample (same way we normalized training data)
+sample_scaled = scaler.transform([sample])
+sample_with_bias = np.insert(sample_scaled, 0, 1)  # Add bias x₀ = 1
+
+# Make prediction
+predicted_price = sample_with_bias.dot(final_weights)[0] * 100000
+
+print(f"\nPredicted Price: ${predicted_price:,.2f}")
+print(f"Actual Price:    ${actual_price:,.2f}")
+
+
