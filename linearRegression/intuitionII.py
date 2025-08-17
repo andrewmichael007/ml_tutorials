@@ -3,7 +3,6 @@
 
 
 # GRADIENT DESCENT INTUITION
-
 import numpy as np
 import matplotlib.pyplot as plt
 
