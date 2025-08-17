@@ -4,9 +4,23 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Fake data for now
-shoe_sizes = np.array([7, 8, 9, 10, 11]) #input feature x
-heights = np.array([160, 165, 170, 175, 180]) # input feature y
+# mocked  data for now
+#input feature x
+shoe_sizes = np.array([
+    7, 8, 9, 10, 11, 12, 13, 14, 15, 16 , 17, 18, 19, 20, 
+    21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 
+    31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 
+    41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52
+]) 
+
+# input feature y
+heights = np.array([
+    150, 155, 160, 165, 170, 175, 180, 185, 190, 195, 200, 
+    205, 210, 215, 220, 225, 230, 235, 240, 245, 250, 255, 260, 265, 270, 275, 
+    280, 285, 290, 295, 300, 305, 310, 315, 320, 325, 330, 335, 340, 345, 350, 
+    355, 360, 365, 370, 375
+]) 
+
 
 # y_hat is the predictions
 
@@ -54,6 +68,6 @@ def predict_height(shoe_size, w, b):
     return w * shoe_size + b
 
 # Example usage
-shoe_size = 12
+shoe_size = 53
 predicted_height = predict_height(shoe_size, w, b)
 print(f"The predicted height for a shoe size of {shoe_size} is {predicted_height:.2f} cm")
