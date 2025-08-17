@@ -85,6 +85,7 @@ def gradient_descent(X, y, learning_rate, number_of_iterations):
 
     return weights, cost_history
 
+
 # Initial weights (0s)
 num_features = X.shape[1]
 initial_weights = np.zeros(num_features)
@@ -121,7 +122,7 @@ sample_with_bias = np.insert(sample_scaled, 0, 1)  # Add bias x₀ = 1
 # Make prediction
 predicted_price = sample_with_bias.dot(final_weights)[0] * 100000
 
+# printing these values
 print(f"\nPredicted Price: ${predicted_price:,.2f}")
 print(f"Actual Price:    ${actual_price:,.2f}")
-
 
