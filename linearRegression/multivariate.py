@@ -12,6 +12,7 @@ X = np.array([
     [10, 75],
     [11, 80]
 ])
+
 y = np.array([160, 165, 170, 175, 180])   #Heights (cm)
 
 m, n = X.shape  # m = number training set, n = number of features
@@ -29,7 +30,7 @@ cost_history = []
 
 # Gradient Descent Algorithm
 for each in range(number_of_iterations):
-    # Compute predictions: y_hat = X * W + b
+    # Compute predictions: y_hat = X * W + b with numpy dot function
     y_hat = np.dot(X, W) + b
 
     # Compute error
