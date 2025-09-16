@@ -13,6 +13,28 @@ X = np.array([
     [11, 80]
 ])
 
+#test and debug
+#first training example
+print((X[0]))  #👉 [ 7, 60 ]
+
+#second training example
+print((X[1]))  #👉 [ 8, 65 ]
+
+#third training example
+print((X[2]))  #👉 [ 9, 70 ]
+
+#first feature of the first training example ( shoe size )
+print((X[0, 0])) #👉 7
+
+#second feature of the second training example ( weight)
+print((X[0, 0])) #👉 60
+
+#first feature of the second training example 
+print((X[0, 0])) #👉 8
+
+#second feature of the second training example
+print((X[0, 0])) #👉 65
+
 y = np.array([160, 165, 170, 175, 180])   #Heights (cm)
 
 m, n = X.shape  # m = number training set, n = number of features
