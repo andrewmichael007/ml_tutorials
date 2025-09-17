@@ -15,25 +15,25 @@ X = np.array([
 
 #test and debug
 #first training example
-print((X[0]))  #👉 [ 7, 60 ]
+print( f"first training example: ", (X[0]) )  #👉 [ 7, 60 ]
 
 #second training example
-print((X[1]))  #👉 [ 8, 65 ]
+print( f"second training example: ", (X[1]))  #👉 [ 8, 65 ]
 
 #third training example
-print((X[2]))  #👉 [ 9, 70 ]
+print( f"third training example : ", (X[2]))  #👉 [ 9, 70 ]
 
 #first feature of the first training example ( shoe size )
-print((X[0, 0])) #👉 7
+print( f"first feature of the first training example: ", ((X[0, 0])) ) #👉 7
 
 #second feature of the second training example ( weight)
-print((X[0, 0])) #👉 60
+print( f"second feature of the second training example: ", (X[0, 1]) ) #👉 60
 
 #first feature of the second training example 
-print((X[0, 0])) #👉 8
+print( f"first feature of the second training example: ", (X[1, 0]) ) #👉 8
 
 #second feature of the second training example
-print((X[0, 0])) #👉 65
+print( f"second feature of the second training example: ", (X[1, 1]) ) #👉 65
 
 y = np.array([160, 165, 170, 175, 180])   #Heights (cm)
 
@@ -84,6 +84,8 @@ plt.xlabel("Number of Iterations")
 plt.ylabel("Cost")
 plt.title("Gradient Descent Convergence for Multivariate Linear Regression")
 plt.show()
+
+
 
 
 
